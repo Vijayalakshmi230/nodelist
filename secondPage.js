@@ -33,4 +33,8 @@ router.get('/:id', (request,response)=>{
         response.send(getRouter.Name)
     }
 })
+router.param('id', (request, response, next, id) => {
+    console.log(id)
+    next()
+})
 module.exports=router
